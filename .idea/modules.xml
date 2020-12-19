@@ -3,12 +3,18 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Battleship.iml" filepath="$PROJECT_DIR$/.idea/modules/Battleship.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Battleship/task/Battleship.Battleship-task.iml" filepath="$PROJECT_DIR$/.idea/modules/Battleship/task/Battleship.Battleship-task.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Battleship/task/Battleship.Battleship-task.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Battleship/task/Battleship.Battleship-task.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Battleship/task/Battleship.Battleship-task.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Battleship/task/Battleship.Battleship-task.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Convert to bytes/Battleship.Problems-Convert_to_bytes.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Convert to bytes/Battleship.Problems-Convert_to_bytes.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Convert to bytes/Battleship.Problems-Convert_to_bytes.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Convert to bytes/Battleship.Problems-Convert_to_bytes.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Convert to bytes/Battleship.Problems-Convert_to_bytes.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Convert to bytes/Battleship.Problems-Convert_to_bytes.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Count words/Battleship.Problems-Count_words.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Count words/Battleship.Problems-Count_words.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Count words/Battleship.Problems-Count_words.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Count words/Battleship.Problems-Count_words.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Count words/Battleship.Problems-Count_words.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Count words/Battleship.Problems-Count_words.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Number of occurrences/Battleship.Problems-Number_of_occurrences.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Number of occurrences/Battleship.Problems-Number_of_occurrences.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Number of occurrences/Battleship.Problems-Number_of_occurrences.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Number of occurrences/Battleship.Problems-Number_of_occurrences.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Number of occurrences/Battleship.Problems-Number_of_occurrences.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Number of occurrences/Battleship.Problems-Number_of_occurrences.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Palindrome/Battleship.Problems-Palindrome.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Palindrome/Battleship.Problems-Palindrome.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Palindrome/Battleship.Problems-Palindrome.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Palindrome/Battleship.Problems-Palindrome.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Palindrome/Battleship.Problems-Palindrome.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Palindrome/Battleship.Problems-Palindrome.test.iml" />
