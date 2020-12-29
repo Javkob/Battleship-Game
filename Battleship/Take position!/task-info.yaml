@@ -288,6 +288,27 @@ files:
 - name: src/battleship/UserInput.java
   visible: true
   learner_created: true
+- name: src/battleship/Coordinates.java
+  visible: true
+  learner_created: true
+- name: src/battleship/ships/Ship.java
+  visible: true
+  learner_created: true
+- name: src/battleship/ships/AircraftCarrier.java
+  visible: true
+  learner_created: true
+- name: src/battleship/ships/Battleship.java
+  visible: true
+  learner_created: true
+- name: src/battleship/ships/Submarine.java
+  visible: true
+  learner_created: true
+- name: src/battleship/ships/Cruiser.java
+  visible: true
+  learner_created: true
+- name: src/battleship/ships/Destroyer.java
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/125/stages/663/implement
 status: Unchecked
 record: -1
