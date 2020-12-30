@@ -24,6 +24,7 @@ public class Main {
         map.display();
         map.initializeShip(destroyer);
         map.display();
+        map.initializeShot();
 
     }
 }

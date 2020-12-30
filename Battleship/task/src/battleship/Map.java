@@ -9,6 +9,8 @@ public class Map {
     private String[][] matrix;
     private final String SHIP_PART = "O";
     private final String FOG_OF_WAR = "~";
+    private static final String MISS_CELL = "M";
+    private static final String HIT_CELL = "X";
     private int rowsWithNum;
     private int columnsWithNum;
     private String rowLetters = " ABCDEFGHIJ";
@@ -57,20 +59,25 @@ public class Map {
         getInput(ship);
     }
 
+    void initializeShot(){
+        System.out.println("The game starts");
+        takeAShot();
+    }
+
     void getInput(Ship ship) {
         Scanner scanner = new Scanner(System.in);
         String firstPoint = scanner.next();
-        String secondPoint  = scanner.next();
+        String secondPoint = scanner.next();
         Coordinates firstCoordinate = getPoint(firstPoint);
         Coordinates secondCoordinate = getPoint(secondPoint);
-        placeShipOnMap(ship,firstCoordinate,secondCoordinate);
+        placeShipOnMap(ship, firstCoordinate, secondCoordinate);
     }
 
-    private void placeShipOnMap(Ship ship,Coordinates firstCoordinate, Coordinates secondCoordinate) {
-        swapPointsIfNeeded(firstCoordinate,secondCoordinate);
-        if(!(verifyInput(firstCoordinate, secondCoordinate, ship))) {
+    private void placeShipOnMap(Ship ship, Coordinates firstCoordinate, Coordinates secondCoordinate) {
+        swapPointsIfNeeded(firstCoordinate, secondCoordinate);
+        if (!(verifyInput(firstCoordinate, secondCoordinate, ship))) {
             drawShipOnMap(firstCoordinate, secondCoordinate);
-        }else{
+        } else {
             getInput(ship);
         }
 
@@ -80,10 +87,10 @@ public class Map {
         if (checkCollision(firstCoordinates, secondCoordinates)) {
             System.out.print("\nError! You placed it too close to another one. Try again:\n");
             return true;
-        }else if (firstCoordinates.getX() != secondCoordinates.getX() && firstCoordinates.getY() != secondCoordinates.getY()) {
+        } else if (firstCoordinates.getX() != secondCoordinates.getX() && firstCoordinates.getY() != secondCoordinates.getY()) {
             System.out.print("\nError! Wrong ship location! Try again:\n");
-            return  true;
-        }else if (checkShipSize(firstCoordinates, secondCoordinates, ship)) {
+            return true;
+        } else if (checkShipSize(firstCoordinates, secondCoordinates, ship)) {
             System.out.printf("\nError! Wrong length of the %s! Try again:\n", ship.getName());
             return true;
         }
@@ -99,10 +106,10 @@ public class Map {
     }
 
     private boolean checkCollision(Coordinates firstCoordinates, Coordinates secondCoordinates) {
-        int x1 = beyondMap(firstCoordinates.getX()- 1);
-        int y1 = beyondMap(firstCoordinates.getY()- 1);
-        int x2 = beyondMap(secondCoordinates.getX()+ 1);
-        int y2 = beyondMap(secondCoordinates.getY()+ 1) ;
+        int x1 = beyondMap(firstCoordinates.getX() - 1);
+        int y1 = beyondMap(firstCoordinates.getY() - 1);
+        int x2 = beyondMap(secondCoordinates.getX() + 1);
+        int y2 = beyondMap(secondCoordinates.getY() + 1);
         for (int i = x1; i <= x2; i++) {
             for (int j = y1; j <= y2; j++) {
                 if (matrix[i][j] == SHIP_PART) {
@@ -125,14 +132,52 @@ public class Map {
     }
 
     boolean checkShipSize(Coordinates firstCoordinates, Coordinates secondCoordinates, Ship ship) {
-        if ((secondCoordinates.getX() - firstCoordinates.getX() > ship.getSize()-1)
-                || (secondCoordinates.getY() - firstCoordinates.getY() > ship.getSize()-1)) {
+        if ((secondCoordinates.getX() - firstCoordinates.getX() > ship.getSize() - 1)
+                || (secondCoordinates.getY() - firstCoordinates.getY() > ship.getSize() - 1)) {
             return true;
-        } else if ((secondCoordinates.getX() - firstCoordinates.getX() < ship.getSize()-1)
-                && (secondCoordinates.getY() - firstCoordinates.getY() < ship.getSize()-1)) {
+        } else if ((secondCoordinates.getX() - firstCoordinates.getX() < ship.getSize() - 1)
+                && (secondCoordinates.getY() - firstCoordinates.getY() < ship.getSize() - 1)) {
             return true;
         }
         return false;
+    }
+
+    public void takeAShot() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Take a shot!");
+        String coordinate = scanner.nextLine();
+        if (!checkShotCoordinate(coordinate)) {
+            return;
+        }
+        Coordinates shotPoint = getPoint(coordinate);
+        placeShotOnBoard(shotPoint);
+    }
+
+    private void placeShotOnBoard(Coordinates shotPoint) {
+        if (matrix[shotPoint.getX()][shotPoint.getY()].equals(FOG_OF_WAR)) {
+            matrix[shotPoint.getX()][shotPoint.getY()] = MISS_CELL;
+            display();
+            System.out.println("You missed!");
+        } else {
+            matrix[shotPoint.getX()][shotPoint.getY()] = HIT_CELL;
+            display();
+            System.out.println("You hit she ship!");
+        }
+    }
+
+    private boolean checkShotCoordinate(String coordinate) {
+        if (getLetterValue(coordinate.toUpperCase().charAt(0)) > 10
+                || getLetterValue(coordinate.toUpperCase().charAt(0)) < 1
+                || Integer.parseInt(coordinate.replaceAll("[\\D]", "")) > 10
+                || Integer.parseInt(coordinate.replaceAll("[\\D]", "")) < 1
+                || coordinate == null
+
+        ) {
+            System.out.println("Error! You entered the wrong coordinates! Try again:");
+            takeAShot();
+            return false;
+        }
+        return true;
     }
 
     private int beyondMap(int x) {
