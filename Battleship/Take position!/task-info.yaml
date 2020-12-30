@@ -285,9 +285,6 @@ files:
 - name: src/battleship/Map.java
   visible: true
   learner_created: true
-- name: src/battleship/UserInput.java
-  visible: true
-  learner_created: true
 - name: src/battleship/Coordinates.java
   visible: true
   learner_created: true
@@ -310,5 +307,9 @@ files:
   visible: true
   learner_created: true
 feedback_link: https://hyperskill.org/projects/125/stages/663/implement
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations! Continue on <a href="https://hyperskill.org/projects/125/stages/663/implement">JetBrains
+    Academy</a>
+  time: Wed, 30 Dec 2020 22:33:03 UTC
 record: -1

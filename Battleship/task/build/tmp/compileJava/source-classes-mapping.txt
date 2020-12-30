@@ -1,4 +1,18 @@
+battleship/ships/Battleship.java
+ battleship.ships.Battleship
 battleship/Main.java
  battleship.Main
+battleship/ships/Ship.java
+ battleship.ships.Ship
+battleship/ships/Destroyer.java
+ battleship.ships.Destroyer
 battleship/Map.java
  battleship.Map
+battleship/Coordinates.java
+ battleship.Coordinates
+battleship/ships/Cruiser.java
+ battleship.ships.Cruiser
+battleship/ships/AircraftCarrier.java
+ battleship.ships.AircraftCarrier
+battleship/ships/Submarine.java
+ battleship.ships.Submarine
